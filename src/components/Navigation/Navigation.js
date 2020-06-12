@@ -16,6 +16,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AppsIcon from '@material-ui/icons/Apps';
 import CallToActionIcon from '@material-ui/icons/CallToAction';
 
+
+
+
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
 	
@@ -40,7 +43,6 @@ TabPanel.propTypes = {
 };
 
 function a11yProps(index) {
-	console.log('index = ' + JSON.stringify(index[0]))
 	return {
 		id: `scrollable-force-tab-${index}`,
 		'aria-controls': `scrollable-force-tabpanel-${index}`
@@ -48,10 +50,16 @@ function a11yProps(index) {
 	};
 }
 
-// function resume(){
-// 	// <a href="https://dritchie3.github.io/AboutMe/resume1.pdf" target="_blank" class="nav-link">Resume'</a>
-// 	console.log("go to resumae url.")
-// }
+function resume(){
+	// return {resume1};
+	// <a href="https://dritchie3.github.io/AboutMe/resume1.pdf" target="_blank" class="nav-link">Resume'</a>
+	console.log("go to resume url.")
+}
+function linkedIn(){
+	// return {resume1};
+	// return (<a href="https://www.linkedin.com/in/douglas-ritchie-672214198"  class="nav-link">Linkedin</a>);
+	console.log("go to LinkedIn url.")
+}
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -114,12 +122,12 @@ var scroller = Scroll.scroller;
 					aria-label='scrollable force tabs example'
 					centered={tabTypes[1]}
 				>
-					<Tab onClick={()=>scrollFunc("about-me")} label='About Me' icon={<PersonPinIcon />} {...a11yProps(0)} />
+					<Tab  onClick={()=>scrollFunc("about-me")} label='About Me' icon={<PersonPinIcon />} {...a11yProps(0)} />
 					<Tab  onClick={()=>scrollFunc("projects")} label='Projects' icon={<AppsIcon />} {...a11yProps(1)} />
 					<Tab  onClick={()=>scrollFunc("experience")} label='Experience' icon={<WorkRoundedIcon />} {...a11yProps(2)} />
 					<Tab  onClick={()=>scrollFunc("skill")} label='Skill' icon={<FavoriteIcon />} {...a11yProps(3)} />
-					<Tab  onClick={()=>scrollFunc("linkedIn")} label='Linked In' icon={<LinkedInIcon />} {...a11yProps(3)} />
-					<Tab  onClick={()=>scrollFunc("resume")} label='Resume' icon={<CallToActionIcon />} {...a11yProps(3)} />
+					<Tab  onClick={()=>linkedIn()} label='LinkedIn' icon={<LinkedInIcon />} />
+					<Tab  onClick={()=>resume()} label='Resume' icon={<CallToActionIcon />}  />
 					<Tab  onClick={()=>scrollFunc("contact-me")} label='Contact Me' icon={<QuestionAnswerRoundedIcon />} {...a11yProps(4)} />
 				</Tabs>
 			</AppBar>

@@ -6,6 +6,43 @@ import axios from "axios";
 import { Element } from "react-scroll";
 import "./Contact.css";
 
+
+// import nodemailer from "nodemailer"
+
+// var nodemailer = require('nodemailer');
+// var transporter = nodemailer.createTransport({
+//     host: 'smtp.att.yahoo.com',
+//     port: 465,
+//     secure: true,
+//     auth: {
+//         user: '',
+//         pass: ''
+//     }
+// });
+
+// var mailOptions = {
+//     from: 'yourusername@gmail.com',
+//     to: '',
+//     subject: 'Hello',
+//     text: 'Hello world',
+//     html: '<b>Hello world</b>'
+// };
+
+// transporter.sendMail(mailOptions, function(error, info) {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log('Message sent: ' + info.response);
+//     }
+//     transporter.close();
+// });
+//end nodemailer
+
+
+
+
+
+
 export default function ContactForm() {
   const handleSubmit = e => {
     e.preventDefault();

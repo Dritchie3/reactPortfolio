@@ -26,7 +26,7 @@ const AboutMe = () => {
         <div className="subtitle">
           <br></br>
           <br></br>
-          <h3>I am a Full stack web developer. I give life to designs!</h3>
+          <h3>I am a Full stack web developer. I give life to designs and Ideas!</h3>
           
         </div>
       </div>
