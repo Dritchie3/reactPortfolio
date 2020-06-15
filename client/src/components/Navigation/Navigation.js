@@ -51,14 +51,21 @@ function a11yProps(index) {
 }
 
 function resume(){
-	// return {resume1};
-	// <a href="https://dritchie3.github.io/AboutMe/resume1.pdf" target="_blank" class="nav-link">Resume'</a>
-	console.log("go to resume url.")
+	return (
+		<div>
+			{window.open("https://dritchie3.github.io/AboutMe/resume1.pdf")}
+			{console.log("go to resume url.")}
+		</div>
+	)
 }
 function linkedIn(){
-	// return {resume1};
-	// return (<a href="https://www.linkedin.com/in/douglas-ritchie-672214198"  class="nav-link">Linkedin</a>);
-	console.log("go to LinkedIn url.")
+	return (
+		<div>
+			{window.open("https://www.linkedin.com/in/douglas-ritchie-672214198")}
+			{console.log("go to LinkedIn url.")}
+		</div>
+	)
+	
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -126,8 +133,8 @@ var scroller = Scroll.scroller;
 					<Tab  onClick={()=>scrollFunc("projects")} label='Projects' icon={<AppsIcon />} {...a11yProps(1)} />
 					<Tab  onClick={()=>scrollFunc("experience")} label='Experience' icon={<WorkRoundedIcon />} {...a11yProps(2)} />
 					<Tab  onClick={()=>scrollFunc("skill")} label='Skill' icon={<FavoriteIcon />} {...a11yProps(3)} />
-					<Tab  onClick={()=>linkedIn()} label='LinkedIn' icon={<LinkedInIcon />} />
-					<Tab  onClick={()=>resume()} label='Resume' icon={<CallToActionIcon />}  />
+					<Tab  onClick={()=>linkedIn()} label='LinkedIn' icon={<LinkedInIcon />} /> 
+					<Tab  onClick={()=>resume()} label='Resume' icon={<CallToActionIcon />}/>
 					<Tab  onClick={()=>scrollFunc("contact-me")} label='Contact Me' icon={<QuestionAnswerRoundedIcon />} {...a11yProps(4)} />
 				</Tabs>
 			</AppBar>

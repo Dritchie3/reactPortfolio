@@ -6,10 +6,11 @@ import axios from "axios";
 import { Element } from "react-scroll";
 import "./Contact.css";
 
+const nodemailer = require('nodemailer');
+require("dotenv").config();
 
-// import nodemailer from "nodemailer"
 
-// var nodemailer = require('nodemailer');
+
 // var transporter = nodemailer.createTransport({
 //     host: 'smtp.att.yahoo.com',
 //     port: 465,
@@ -52,6 +53,13 @@ export default function ContactForm() {
     const resetForm = () => {
       document.getElementById("contact-form").reset();
     };
+
+    // let transporter = nodemailer.createTransport({
+//   service: 'yahoo',
+//   auth: {
+//     user: process.env.EMAIL,
+//     pass: process.env.PASSWORD
+//   }
     /*  let headers = new Headers();
     headers.append(
       "Access-Control-Allow-Origin",
@@ -61,7 +69,8 @@ export default function ContactForm() {
 
     axios({
       method: "POST",
-      url: "URLOFBACKEND/email",
+      url: process.env.EMAIL,
+      // pass: process.env.PASSWORD,
       data: {
         name: name,
         email: email,
