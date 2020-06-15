@@ -6,7 +6,7 @@ import axios from "axios";
 import { Element } from "react-scroll";
 import "./Contact.css";
 
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 require("dotenv").config();
 
 
