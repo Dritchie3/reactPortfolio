@@ -55,11 +55,11 @@ export default function ContactForm() {
     };
 
     // let transporter = nodemailer.createTransport({
-//   service: 'yahoo',
-//   auth: {
-//     user: process.env.EMAIL,
-//     pass: process.env.PASSWORD
-//   }
+    //   service: 'yahoo',
+    //   auth: {
+    //     user: process.env.EMAIL,
+    //     pass: process.env.PASSWORD
+    //   }
     /*  let headers = new Headers();
     headers.append(
       "Access-Control-Allow-Origin",
