@@ -2,7 +2,7 @@
 
 github URL: https://github.com/Dritchie3/reactPortfolio
 
-Heroku URL: https://dashboard.heroku.com/apps/shrouded-cove-94595
+Heroku URL: https://shrouded-cove-94595.herokuapp.com/
 
 Video of project workin: https://drive.google.com/file/d/1FCZXuDIxXNG45RDAVgPhPd6o7rsiUjQs/view
 
