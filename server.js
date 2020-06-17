@@ -3,7 +3,7 @@ const favicon = require('express-favicon');
 
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 
 app.use(favicon(__dirname + 'client/src/assets/self_photo.jpg'));
