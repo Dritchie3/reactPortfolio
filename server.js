@@ -12,9 +12,11 @@ app.use(favicon(__dirname + 'client/src/assets/self_photo.jpg'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+console.log(`-------------- ${production} ----------------`);
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+console.log(`-------------- ${production} ----------------`);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
