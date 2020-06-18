@@ -17,33 +17,33 @@ app.get('/ping', function (req, res) {
  return res.send('pong');
 });
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.post('/contact', function (req, res) {
-  var transporter = nodemailer.createTransport({
-    service: 'yahoo',
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD
-    }
-  });
+// app.post('/contact', function (req, res) {
+//   var transporter = nodemailer.createTransport({
+//     service: 'yahoo',
+//     auth: {
+//       user: process.env.EMAIL,
+//       pass: process.env.PASSWORD
+//     }
+//   });
   
-  var mailOptions = {
-    from: process.env.EMAIL,
-    to: process.env.EMAIL,
-    subject: 'Sending Email using Node.js',
-    text: 'That was easy!'
-  };
+//   var mailOptions = {
+//     from: process.env.EMAIL,
+//     to: process.env.EMAIL,
+//     subject: 'Sending Email using Node.js',
+//     text: 'That was easy!'
+//   };
   
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
-});
+//   transporter.sendMail(mailOptions, function(error, info){
+//     if (error) {
+//       console.log(error);
+//     } else {
+//       console.log('Email sent: ' + info.response);
+//     }
+//   });
+// });
 
 // Define middleware here
 // app.use(express.urlencoded({ extended: true }));
