@@ -1,5 +1,5 @@
 {
-  "name": "reactportfoliosh70",
+  "name": "reactportfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "react-dom": "^16.13.1",
     "react-linkedin-share-link": "^1.0.2",
     "react-pdf": "^4.1.0",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.0",
     "react-scroll": "^1.7.16",
     "typography": "^0.16.19"
   },
