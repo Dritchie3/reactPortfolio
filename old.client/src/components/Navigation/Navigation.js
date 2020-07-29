@@ -58,6 +58,14 @@ function resume(){
 		</div>
 	)
 }
+function github(){
+	return (
+		<div>
+			{window.open("https://github.com/Dritchie3")}
+			{console.log("go to github url.")}
+		</div>
+	)
+}
 function linkedIn(){
 	return (
 		<div>
@@ -128,13 +136,14 @@ var scroller = Scroll.scroller;
 					textColor='primary'
 					aria-label='scrollable force tabs example'
 					centered={tabTypes[1]}
-				>
+				>	
 					<Tab  onClick={()=>scrollFunc("about-me")} label='About Me' icon={<PersonPinIcon />} {...a11yProps(0)} />
 					<Tab  onClick={()=>scrollFunc("projects")} label='Projects' icon={<AppsIcon />} {...a11yProps(1)} />
 					<Tab  onClick={()=>scrollFunc("experience")} label='Experience' icon={<WorkRoundedIcon />} {...a11yProps(2)} />
 					<Tab  onClick={()=>scrollFunc("skill")} label='Skill' icon={<FavoriteIcon />} {...a11yProps(3)} />
 					<Tab  onClick={()=>linkedIn()} label='LinkedIn' icon={<LinkedInIcon />} /> 
 					<Tab  onClick={()=>resume()} label='Resume' icon={<CallToActionIcon />}/>
+					<Tab  onClick={()=>github()} label='Github' icon={<GithubIcon />}/>
 					<Tab  onClick={()=>scrollFunc("contact-me")} label='Contact Me' icon={<QuestionAnswerRoundedIcon />} {...a11yProps(4)} />
 				</Tabs>
 			</AppBar>
