@@ -1,7 +1,7 @@
 let project_list = [
 	{
 		image:
-			'https://dritchie3.github.io/reactportfolio/src/assts/projects/CPC.png',
+			'https://github.com/Dritchie3/reactPortfolio/src/assets/projects/CPC.png',
 		title: 'CodeProConnection App',
 		des:
 			"This is a full-Stack app using MongoDB, Mongoose, Jquery, Bootstrap, HTML, Passport for authentication, and JSON for api calls.  It allows Freelance workers to connect to project hiring managers.  The idea is to allow the managers, (it does not have to be a manager, it could be anyone that needs work done), to post jobs for websites, apps, and electronic media that thay need freelancers for.  It allows the hirer to post the jobs and the freelancer to apply for the job.  Currently the sorting feature and the contact/mail-to features are in progress. ",
