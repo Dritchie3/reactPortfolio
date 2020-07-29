@@ -15,7 +15,7 @@ import './Navigation.css';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AppsIcon from '@material-ui/icons/Apps';
 import CallToActionIcon from '@material-ui/icons/CallToAction';
-
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 
@@ -143,7 +143,7 @@ var scroller = Scroll.scroller;
 					<Tab  onClick={()=>scrollFunc("skill")} label='Skill' icon={<FavoriteIcon />} {...a11yProps(3)} />
 					<Tab  onClick={()=>linkedIn()} label='LinkedIn' icon={<LinkedInIcon />} /> 
 					<Tab  onClick={()=>resume()} label='Resume' icon={<CallToActionIcon />}/>
-					<Tab  onClick={()=>github()} label='Github' icon={<CallToActionIcon />}/>
+					<Tab  onClick={()=>github()} label='Github' icon={<GitHubIcon />}/>
 					<Tab  onClick={()=>scrollFunc("contact-me")} label='Contact Me' icon={<QuestionAnswerRoundedIcon />} {...a11yProps(4)} />
 				</Tabs>
 			</AppBar>
