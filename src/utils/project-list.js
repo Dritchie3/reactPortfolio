@@ -5,7 +5,7 @@ let project_list = [
 		title: 'CodeProConnection App',
 		des:
 			"This is a full-Stack app using MongoDB, Mongoose, Jquery, Bootstrap, HTML, Passport for authentication, and JSON for api calls.  It allows Freelance workers to connect to project hiring managers.  The idea is to allow the managers, (it does not have to be a manager, it could be anyone that needs work done), to post jobs for websites, apps, and electronic media that thay need freelancers for.  It allows the hirer to post the jobs and the freelancer to apply for the job.  Currently the sorting feature and the contact/mail-to features are in progress. ",
-		tags: [ 'React', 'NodeJS', 'MongoDB', 'Mongoose', 'CSS', 'Bootstrap', 'Jquery' ],
+		tags: [ 'React', 'NodeJS', 'Pssport','MongoDB', 'Mongoose', 'CSS', 'Bootstrap', 'Jquery' ],
 		links: {
 			launch: 'https://cpc-project3.herokuapp.com/',
 			github: 'https://github.com/shamlin143/Codepro2'
@@ -17,7 +17,7 @@ let project_list = [
 		title: 'GetFed Recipe App',
 		des:
 			"This is a front-Stack app using Jquery, Bootstrap, HTML, CSS and JSON for api calls.The purpose is to help one decide on a meal based on the ingredients in the cupboard. You get home and want to make a meal but don’t have an idea of what to make. This is where GetFed gets you started. Get recipes based on ingredients, items on hand, or restrictions. If you’re hungry, GetFed. This App utilized the 'Edemam.com api'. It allows one to enter as many ingredients as they like and the app will return a list of choices based on what can be made with the ingredients on hand.",
-		tags: [ 'HTML', 'CSS', 'Bootstrap', 'Jquery' ],
+		tags: [ 'HTML/CSS', 'Javascript', 'Jquery', 'Bootstrap', ],
 		links: {
 			launch: 'https://dritchie3.github.io/GetFedProject',
 			github: 'https://github.com/Dritchie3/GetFed'
@@ -29,7 +29,7 @@ let project_list = [
 		title: 'Quarentainment',
 		des:
 			"This is a Full Stack Project using ExpressJS and Passport (NodeJS) Development of a Social Media App. Passport allows for password authentication and hashing of the password and username for privacy. Also, it allows entered usernames, password and responses to be saved in a MySQL database. The purpose of this app is to allow a place for people to visit during the 'shut-in' time of being in quarantine, due to Covid-19.", 
-		tags: [ 'HTML', 'CSS','Nodejs', 'express','Jquery','Bootstrap' ],
+		tags: [ 'HTML/CSS','Nodejs', 'express', 'Jquery', 'Passport','Bootstrap' ],
 		links: {
 			launch: 'https://quarintainment.herokuapp.com/',
 			github: 'https://github.com/Dritchie3/Quarintainment'

@@ -5,42 +5,54 @@ import Button from "@material-ui/core/Button";
 import axios from "axios";
 import { Element } from "react-scroll";
 import "./Contact.css";
+const nodemailer = require('nodemailer');
 
 // const nodemailer = require('nodemailer');
 require("dotenv").config();
 
+// let testAccount = await nodemailer.createTestAccount();
 
+let transporter = nodemailer.createTransport({
+    host: 'smtp.att.yahoo.com',
+    port: 465,
+    secure: true,
+    auth: {
+       user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+    }
+});
 
-// var transporter = nodemailer.createTransport({
-//     host: 'smtp.att.yahoo.com',
-//     port: 465,
-//     secure: true,
-//     auth: {
-//         user: '',
-//         pass: ''
-//     }
+// await transporter.sendMail({
+//   from: '"Fred Foo 👻" <foo@example.com>', // sender address
+//   to: "bar@example.com, baz@example.com", // list of receivers
+//   subject: "Hello ✔", // Subject line
+//   text: "Hello world?", // plain text body
+//   html: "<b>Hello world?</b>", // html body
 // });
 
-// var mailOptions = {
-//     from: 'yourusername@gmail.com',
-//     to: '',
-//     subject: 'Hello',
-//     text: 'Hello world',
-//     html: '<b>Hello world</b>'
-// };
 
-// transporter.sendMail(mailOptions, function(error, info) {
-//     if (error) {
-//         console.log(error);
-//     } else {
-//         console.log('Message sent: ' + info.response);
-//     }
-//     transporter.close();
-// });
-//end nodemailer
+var mailOptions = {
+    from: 'dritchie3@sbcglobal.net',
+    to: 'dritchie3@sbcglobal.net',
+    subject: 'Hello',
+    text: 'Hello world',
+    html: '<b>Hello world</b>'
+};
+
+let info = transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log('Message sent: ' + info.response);
+    }
+    transporter.close();
+});
 
 
 
+// console.log("Message sent: %s", info.messageId);
+
+// console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
 
 
@@ -54,6 +66,9 @@ export default function ContactForm() {
       document.getElementById("contact-form").reset();
     };
 
+    
+
+       console.log(name + ', ' + email +', '+ message) 
     // let transporter = nodemailer.createTransport({
     //   service: 'yahoo',
     //   auth: {
@@ -87,6 +102,7 @@ export default function ContactForm() {
       }
     });
   };
+
   return (
     <React.Fragment>
       <Typography
@@ -164,6 +180,7 @@ export default function ContactForm() {
             </Button>
           </div>
         </form>
+        
       </div>
     </React.Fragment>
   );

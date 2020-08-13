@@ -3,7 +3,17 @@ const favicon = require('express-favicon');
 const path = require('path');
 const PORT = process.env.PORT || 3002;
 const app = express();
+const bodyParser = require('body-parser');
+// const nodemailer = require('nodemailer');
 
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false}));
+
+app.post('/api/form', (req, res) =>{
+  console.log(req.body);
+  console.log('1234')
+});
 
 
 
@@ -18,6 +28,13 @@ app.get('/ping', function (req, res) {
 });
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+
+
+// Start the API server
+app.listen(PORT, function() {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
 // app.post('/contact', function (req, res) {
@@ -61,12 +78,6 @@ app.get('/*', function (req, res) {
 // }
 // Add routes, both API and view
 // app.use(routes);
-
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-});
-
 
 
 // this code will allow for email to be sent to me.
