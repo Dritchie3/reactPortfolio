@@ -53,7 +53,7 @@ function a11yProps(index) {
 function resume(){
 	return (
 		<div>
-			{window.open("https://dritchie3.github.io/AboutMe/resume1.pdf")}
+			{window.open("https://docs.google.com/document/d/1hv6gUCoPD6GTLi-abESPHqO-HQfZj8DRHUPxaGlXqmE/edit?usp=sharing")}
 			{console.log("go to resume url.")}
 		</div>
 	)
